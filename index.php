@@ -1,4 +1,5 @@
 <?php
+// USING STOCK VIDEOS FROM: https://coverr.co
 $video_mp4 = "videos/Not-Eiffel.mp4";
 $video_webm = "videos/Not-Eiffel.webm";
 $video_ogg = "videos/Not-Eiffel.ogv";
@@ -10,12 +11,16 @@ $video_poster = "videos/Not-Eiffel.jpg";
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link href="styles.css" type="text/css" rel="stylesheet"/>
+        <!-- STYLES ARE IN SCSS AND THEN COMPILED TO CSS -->
+        <link href="assets/styles/styles.css" type="text/css" rel="stylesheet"/>
         <title>Learning Video Tag</title>
     </head>
     <body>
         <h1>Experimenting with HTML</h1>
         <div class="video-container">
+            <!-- REFERENCING CODE AND DOCUMENTATION FROM: https://developer.mozilla.org/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics 
+            THANKS ALSO TO IAN DEVLIN FOR POSTING THEIR CODE TO GITHUB: https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-styled
+            -->
             <figure id="videoContainer">
                 <video id="video" controls muted preload="none" poster="<?php echo $video_poster; ?>">
                     <source src="<?php echo $video_mp4; ?>" type="video/mp4" />

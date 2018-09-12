@@ -1,0 +1,63 @@
+#videoContainer {
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+#videoContainer:hover .controls, #videoContainer:active .controls, #videoContainer .controls[data-state=visible] {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+}
+
+#progress {
+  flex-grow: 2;
+}
+
+#progress-bar {
+  width: 100%;
+}
+
+.controls {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  display: none;
+}
+.controls button {
+  border: 0px;
+  width: 50px;
+}
+.controls .progress {
+  flex-grow: 2;
+}
+.controls progress {
+  width: 100%;
+}
+.controls progress[data-state=fake] {
+  background: #e6e6e6;
+  height: 65%;
+}
+.controls progress span {
+  width: 0%;
+  height: 100%;
+  display: inline-block;
+  background-color: #2a84cd;
+}
+.controls progress::-moz-progress-bar {
+  background-color: #0095dd;
+}
+.controls progress::-webkit-progress-value {
+  background-color: #0095dd;
+}
+
+#mute[data-state=mute] {
+  background-color: red;
+}
+
+.video-container video {
+  width: 100%;
+}
+
+/*# sourceMappingURL=styles.css.map */
